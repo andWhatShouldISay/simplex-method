@@ -205,7 +205,9 @@ public:
         print(a);
         double f;
         print(getX(f));
+        print(perm);
         cout << f << endl;
+        cout << endl;
 
         auto b=basis();
         int step=0;
@@ -269,6 +271,7 @@ public:
 
             print(a);
             print(getX(f));
+            print(perm);
             cout << f << endl;
 
             cout << endl;
