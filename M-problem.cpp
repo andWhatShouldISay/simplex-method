@@ -246,7 +246,7 @@ public:
                 break;
             }
 
-            cout << "q = " << eqs+q+1 << endl;
+            cout << "q = " << q << endl;
 
             vector<double> aq(eqs);
             for (int i=0;i<eqs;i++)
@@ -265,7 +265,7 @@ public:
                 cout << "unlimited" << endl;
                 return;
             }
-            cout << "p = " << perm[p]+1 << endl;
+            cout << "p = " << p << endl;
 
             swap_column(p,q+eqs);
 
