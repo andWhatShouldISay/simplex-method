@@ -1,0 +1,2 @@
+# simplex-method
+шестая лаба
