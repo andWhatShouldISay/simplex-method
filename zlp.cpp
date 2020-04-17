@@ -349,8 +349,9 @@ bool isZ(vector<double>& v)
 
 bool cmp_Z(double a,double b)
 {
-    return (isZ(a)?1:a-round(a))<(isZ(b)?1:b-round(b));
+    return (isZ(a)?1:a-floor(a))<(isZ(b)?1:b-floor(b));
 }
+
 
 result lim_floor(result R)
 {
