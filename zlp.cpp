@@ -352,10 +352,11 @@ bool cmp_Z(double a,double b)
     return (isZ(a)?1:a-floor(a))<(isZ(b)?1:b-floor(b));
 }
 
+int n;
 
 result lim_floor(result R)
 {
-    int pos=min_element(R.res.begin(),R.res.end(),cmp_Z)-R.res.begin();
+    int pos=min_element(R.res.begin(),R.res.begin()+n,cmp_Z)-R.res.begin();
     int x=floor(R.res[pos]);
     R.c.push_back(0);
     for (int i=0; i<R.A.size(); i++)
@@ -376,7 +377,7 @@ result lim_floor(result R)
 
 result lim_ceil(result R)
 {
-    int pos=min_element(R.res.begin(),R.res.end(),cmp_Z)-R.res.begin();
+    int pos=min_element(R.res.begin(),R.res.begin()+n,cmp_Z)-R.res.begin();
     int x=ceil(R.res[pos]);
     R.c.push_back(0);
     for (int i=0; i<R.A.size(); i++)
@@ -486,7 +487,7 @@ int main()
         {2,-3,0,1,15},
         {2,5,7,1,44},
     };
-    int n=A[0].size()-1;
+    n=A[0].size()-1;
     vector<double> c= {2,1,0,-4};
     auto p=solve(A,c);
     if (p.res.empty())
